@@ -2,14 +2,12 @@
 
 import { useState } from "react";
 import { ProgressBar } from "../ui/progress-bar";
+import { useRouter } from "next/navigation";
 import Question from "../ui/question";
+import questions from "../questions";
 
 export default function Page() {
-    const questions = [
-        { question: "Are you a Muslim?", answers: ["Yes", "No"] },
-        { question: "Do you pray daily?", answers: ["Yes", "No", "Sometimes"] },
-        { question: "Where were you born?", answers: ["America", "Middle East", "Allah Knows Best"] },
-    ];
+    const router = useRouter();
     const [index, setIndex] = useState(0);
 
     const handleAnswer = (answer: string) => {
@@ -18,6 +16,7 @@ export default function Page() {
             setIndex(index + 1);
         } else {
             console.log("Quiz complete!");
+            router.push("/end");
         }
     };
 

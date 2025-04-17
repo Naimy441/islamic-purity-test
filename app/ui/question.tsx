@@ -7,11 +7,7 @@ interface QuestionProps {
     onAnswer: (answer: string) => void,
 }
 
-export default function Question({index, question, answers, onAnswer} : QuestionProps) {
-    const handleClick = () => {
-
-    }
-    
+export default function Question({index, question, answers, onAnswer} : QuestionProps) {    
     return (
         <div className="flex flex-col items-center justify-center min-h-screen space-y-4">
             <div className="text-3xl">

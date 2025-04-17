@@ -1,13 +1,7 @@
-import Image from "next/image";
-import { Button } from "@/app/ui/button";
 import Link from "next/link";
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function Home() {
-  const startTest = () => {
-    console.log("Started.");
-  }
-
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="text-left text-8xl font-extrabold leading-snug">
