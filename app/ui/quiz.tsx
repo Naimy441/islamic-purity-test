@@ -22,10 +22,10 @@ export default function Quiz({questions}:{questions: any[]}) {
 
     return (
         <div>
-            <Suspense fallback={<CardSkeleton />}>
-                <ProgressBar percentage={100 * (index + 1) / questions.length} />
+            <ProgressBar percentage={100 * (index + 1) / questions.length} />
+            <div className="px-8">
                 <Question index={index + 1} question={questions[index]['question']} answers={questions[index]['answers']} onAnswer={(answer) => handleAnswer(answer)} />
-            </Suspense>
+            </div>
         </div>
     );
 }
